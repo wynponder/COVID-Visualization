@@ -1,0 +1,180 @@
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 200px;
+    width: 500px;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1fr;
+    grid-template-rows: 175px 1fr 1fr 1fr;
+}
+
+.header {
+    grid-column: 1 / span 3;
+    grid-row: 1 / 1;
+    color: rgb(1, 22, 49);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 42pt;
+    width: 100%;
+    text-align: center;
+}
+
+.subheader {
+    grid-column: 1 / span 3;
+    grid-row: 1 / 1;
+    color: rgb(1, 22, 49);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 32pt;
+    width: 100%;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.data-comparison-one {
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+}
+
+.orange-virus {
+    color: rgb(232, 93, 38);
+    float: left;
+    padding-right: 15px;
+    padding-top: 70px;
+}
+
+.paragraph-one {
+    border-left: 2px solid rgb(232, 93, 38);
+    border-collapse: separate;
+    border-spacing: 50px;
+    padding-left: 10px;
+}
+
+.data-comparison-two {
+    grid-column: 3 / 3;
+    grid-row: 2 / 2;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+}
+
+.yellow-virus {
+    color: rgb(246, 189, 96);
+    float: left;
+    padding-right: 15px;
+    padding-top: 70px;
+}
+
+.paragraph-two {
+    border-left: 2px solid rgb(246, 189, 96);
+    border-collapse: separate;
+    border-spacing: 50px;
+    padding-left: 10px;
+}
+
+.data-comparison-three {
+    grid-column: 1 / 1;
+    grid-row: 4 / 4;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+}
+
+.navy-virus {
+    color: rgb(61, 90, 128);
+    float: left;
+    padding-right: 15px;
+    padding-top: 70px;
+}
+
+.paragraph-three {
+    border-left: 2px solid rgb(61, 90, 128);
+    border-collapse: separate;
+    border-spacing: 50px;
+    padding-left: 10px;
+}
+
+.data-comparison-four {
+    grid-column: 3 / 3;
+    grid-row: 4 / 4;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+}
+
+.blue-virus {
+    color: rgb(152, 193, 217);
+    float: left;
+    padding-right: 15px;
+    padding-top: 70px;
+}
+
+.paragraph-four {
+    border-left: 2px solid rgb(152, 193, 217);
+    border-collapse: separate;
+    border-spacing: 50px;
+    padding-left: 10px;
+}
+
+svg {
+    font-size: 52px;
+    fill: #011631;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.total-vaccines {
+    grid-column: 2 / 2;
+    grid-row: 3 / 3;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+}
+
+#admin {
+    font-size: 1.7vmax;
+    fill: #011631;
+    font-family: 'Montserrat', sans-serif;
+    left:50%;
+    position:relative;
+    top:5%;
+    bottom: 30%;
+    left:50%;
+}
+
+/*#usa {
+    position:relative;
+    bottom: 25%;
+    top:25%;
+    left:25%;
+    font-size: 32px;
+    fill: #011631;
+    font-family: 'Montserrat', sans-serif;  
+}*/
