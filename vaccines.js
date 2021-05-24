@@ -9,7 +9,7 @@ function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-//Total US Cases
+//top left component - confirmed US Cases
 $(document).ready(function () {
     $.getJSON("https://covid-api.mmediagroup.fr/v1/cases?country=US",
         function (data) {
@@ -39,14 +39,9 @@ $(document).ready(function () {
 })*/
 
 
-var usVaccineData = {
-    "url": "https://covid-api.mmediagroup.fr/v1/vaccines?country=United%20States",
-    "method": "GET",
-    "timeout": 0,
-};
-
+//top right component - complete vaccinations
 $(document).ready(function () {
-    $.getJSON("https://covid-api.mmediagroup.fr/v1/vaccines?country=United%20States",
+    $.getJSON("https://covid-api.mmediagroup.fr/v1/vaccines?country=US",
         function (data) {
             var peopleFullyVaccinated = data["All"]["people_vaccinated"];
             document.getElementById("usaPeople").innerHTML = numberWithCommas(peopleFullyVaccinated);
@@ -60,8 +55,9 @@ $(document).ready(function () {
         })
 });
 
+//bottom left component - partial vaccinations
 $(document).ready(function () {
-    $.getJSON("https://covid-api.mmediagroup.fr/v1/vaccines?country=United%20States",
+    $.getJSON("https://covid-api.mmediagroup.fr/v1/vaccines?country=US",
         function (data) {
             var partiallyVaccinated = data["All"]["people_partially_vaccinated"];
             document.getElementById("partialUS").innerHTML = numberWithCommas(partiallyVaccinated);
@@ -75,23 +71,45 @@ $(document).ready(function () {
         })
 });
 
+//center component - total vaccinations: partial + complete
 $(document).ready(function () {
-    $.getJSON("https://covid-api.mmediagroup.fr/v1/vaccines?country=United%20States",
+    $.getJSON("https://covid-api.mmediagroup.fr/v1/vaccines?country=US",
         function (data) {
             var administeredShots = data["All"]["administered"];
             document.getElementById("admin").innerHTML = numberWithCommas(administeredShots);
         })
 });
 
-/*$(document).ready(function () {
-    $.getJSON("https://covid-api.mmediagroup.fr/v1/cases?ab=US&status=confirmed",
+//bottom right component - top three states
+$(document).ready(function () {
+    $.getJSON("https://covid-api.mmediagroup.fr/v1/cases?country=US",
         function (data) {
-            var top5 = function sortByKeyDesc(array, confirmed) {
-                return array.sort(function (a, b) {
-                    var x = a["confirmed"]; var y = b["confirmed"];
-                    return ((x > y) ? -1 : ((x < y) ? 1 : 0));
-                });
+            const topFive = data["confirmed"];
+            var sortable = [];
+            for (var state in data) {
+                sortable.push([state, data["confirmed"]]);
             }
-            console.log(top5); 
+
+            var sort = sortable.sort(function (a, b) {
+                return a[1] - b[1];
+            })
+
+            var onlyStates = sort.splice(2);
+
+            var firstState = onlyStates[1];
+            var secondState = onlyStates[2];
+            var thirdState = onlyStates[3];
+
+            document.getElementById("firstState").innerHTML = firstState;
+            document.getElementById("secondState").innerHTML = secondState;
+            document.getElementById("thirdState").innerHTML = thirdState;
+
+
+            n = new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            var todayDate = document.getElementById("todayDateFour").innerHTML = m + "/" + d + "/" + y;
+
         })
-});*/
+});
