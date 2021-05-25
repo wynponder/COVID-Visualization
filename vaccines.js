@@ -84,25 +84,34 @@ $(document).ready(function () {
 $(document).ready(function () {
     $.getJSON("https://covid-api.mmediagroup.fr/v1/cases?country=US",
         function (data) {
-            const topFive = data["confirmed"];
             var sortable = [];
+            /*create variable called ignored states - actual check here within the for loop would be if state is not in ignored states, push*/
+            var ignoredStates = [
+                "All",
+                "Grand Princess"
+            ];
+            //console.log(data);
             for (var state in data) {
-                sortable.push([state, data["confirmed"]]);
+                //if ignored states includes state, it would just push all and GP
+                if (!ignoredStates.includes(state)) {
+                    sortable.push([state, data[state].confirmed])
+                };
             }
 
-            var sort = sortable.sort(function (a, b) {
-                return a[1] - b[1];
+
+            var sorted = sortable.sort(function (a, b) {
+                return a[1] < b[1] ? 1 : -1;
             })
 
-            var onlyStates = sort.splice(2);
 
-            var firstState = onlyStates[1];
-            var secondState = onlyStates[2];
-            var thirdState = onlyStates[3];
+            var firstState = sorted[0];
+            var secondState = sorted[1];
+            var thirdState = sorted[2];
 
-            document.getElementById("firstState").innerHTML = firstState;
-            document.getElementById("secondState").innerHTML = secondState;
-            document.getElementById("thirdState").innerHTML = thirdState;
+            //document.getElementById("firstState").innerHTML = firstState.join(" ");
+            document.getElementById("firstState").innerHTML = firstState[0] + ": " + numberWithCommas(firstState[1]);
+            document.getElementById("secondState").innerHTML = secondState[0] + ": " + numberWithCommas(secondState[1]);
+            document.getElementById("thirdState").innerHTML = thirdState[0] + ": " + numberWithCommas(thirdState[1]);
 
 
             n = new Date();
