@@ -22,78 +22,58 @@
     <div class="container">
         <h1 class="header">UNITED STATES COVID DATA VISUALIZATION</h1>
         <h2 class="subheader">TRACKING COVID CASES AND VACCINE ROLLOUT</h2>
-        <div class="data-comparison-one">
+        <div class="data-comparison-one virus-comparison">
             <div class="orange-virus">
-                <a style="pointer-events: none; cursor: default;" data-flickr-embed="true"
-                    href="https://www.flickr.com/photos/184916186@N02/51140758210/in/dateposted-public/"
-                    title="orange-virus"><img src="https://live.staticflickr.com/65535/51140758210_a1540fe91c_o.png"
-                        width="125" height="150" alt="orange-virus"></a>
+                <img src="https://live.staticflickr.com/65535/51140758210_a1540fe91c_o.png" width="125" height="150"
+                    alt="orange-virus">
             </div>
-            <!-- <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> -->
-            <div class="data-text-one">
-                <script src="vaccines.js"></script>
-                <h3>
-                    CONFIRMED CASES IN THE US
-                </h3>
-                <p class="paragraph-one">
-                    THE US HAS REPORTED <span id="totalCasesUS"></span> POSITIVE TESTS AS OF <span
-                        id="todayDateTwo"></span>.
-                </p>
-            </div>
+            <script src="vaccines.js"></script>
+            <h3>
+                CONFIRMED CASES IN THE US
+            </h3>
+            <p class="paragraph-one">
+                THE US HAS REPORTED <span id="totalCasesUS"></span> POSITIVE TESTS AS OF <span
+                    id="todayDateTwo"></span>.
+            </p>
         </div>
-        <div class="data-comparison-two">
-            <a class="yellow-virus" style="pointer-events: none; cursor: default;" data-flickr-embed="true"
-                href="https://www.flickr.com/photos/184916186@N02/51140430664/in/dateposted-public/"
-                title="yellow-virus"><img src="https://live.staticflickr.com/65535/51140430664_fc36bf4da2_o.png"
-                    width="125" height="150" alt="yellow-virus"></a>
-            <!-- <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> -->
-            <div class="data-text-two">
-                <h3>
-                    COMPLETE VACCINATIONS
-                </h3>
-                <p class="paragraph-two">
-                    <span id="usaPeople"></span> PEOPLE HAVE BEEN FULLY VACCINATED IN THE UNITED STATES AS OF VACCINES
-                    AS OF <span id="todayDate"></span>.
-                </p>
-            </div>
+        <div class="data-comparison-two virus-comparison">
+            <img src="https://live.staticflickr.com/65535/51140430664_fc36bf4da2_o.png" width="125" height="150"
+                alt="yellow-virus">
+            <h3>
+                COMPLETE VACCINATIONS
+            </h3>
+            <p class="paragraph-two">
+                <span id="usaPeople"></span> PEOPLE HAVE BEEN FULLY VACCINATED IN THE UNITED STATES AS OF VACCINES
+                AS OF <span id="todayDate"></span>.
+            </p>
         </div>
-        <div class="data-comparison-three">
-            <a class="navy-virus" style="pointer-events: none; cursor: default;" data-flickr-embed="true"
-                href="https://www.flickr.com/photos/184916186@N02/51138980732/in/dateposted-public/"
-                title="navy-virus"><img src="https://live.staticflickr.com/65535/51138980732_08628b3155_o.png"
-                    width="125" height="150" alt="navy-virus"></a>
-            <!-- <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> -->
-            <div data-text-three>
-                <h3>
-                    PARTIAL VACCINATIONS
-                </h3>
-                <p class="paragraph-three">
-                    <span id="partialUS"></span> PEOPLE HAVE BEEN PARTIALLY VACCINATED IN THE UNITED STATES AS OF
-                    VACCINES AS OF <span id="todayDateThree"></span>.
-                </p>
-            </div>
+        <div class="data-comparison-three virus-comparison">
+            <img class="navy-virus" src="https://live.staticflickr.com/65535/51138980732_08628b3155_o.png" width="125"
+                height="150" alt="navy-virus">
+            <h3>
+                PARTIAL VACCINATIONS
+            </h3>
+            <p class="paragraph-three">
+                <span id="partialUS"></span> PEOPLE HAVE BEEN PARTIALLY VACCINATED IN THE UNITED STATES AS OF
+                VACCINES AS OF <span id="todayDateThree"></span>.
+            </p>
         </div>
-        <div class="data-comparison-four">
-            <a class="blue-virus" style="pointer-events: none; cursor: default;" data-flickr-embed="true"
-                href="https://www.flickr.com/photos/184916186@N02/51140758195/in/dateposted-public/"
-                title="blue-virus"><img src="https://live.staticflickr.com/65535/51140758195_56ec7b292d_o.png"
-                    width="125" height="150" alt="blue-virus"></a>
-            <!-- <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> -->
-            <div class='data-text-four'>
-                <h3>
-                    POSITIVE CASES BY STATE
-                </h3>
-                <div class="paragraph-four">
-                    <p>
-                        AS OF <span id="todayDateFour"></span>, THE TOP THREE STATES WITH THE
-                        MOST COVID CASES ARE:
-                    </p>
-                    <ul>
-                        <li><span id="firstState"></span></li>
-                        <li><span id="secondState"></span></li>
-                        <li><span id="thirdState"></span></li>
-                    </ul>
-                </div>
+        <div class="data-comparison-four virus-comparison">
+            <img class="blue-virus" src="https://live.staticflickr.com/65535/51140758195_56ec7b292d_o.png" width="125"
+                height="150" alt="blue-virus">
+            <h3>
+                POSITIVE CASES BY STATE
+            </h3>
+            <div class = "data-four">
+                <p>
+                    AS OF <span id="todayDateFour"></span>, THE TOP THREE STATES WITH THE
+                    MOST COVID CASES ARE:
+                </p>
+                <ul>
+                    <li><span id="firstState"></span></li>
+                    <li><span id="secondState"></span></li>
+                    <li><span id="thirdState"></span></li>
+                </ul>
             </div>
         </div>
         <div class="total-vaccines">
