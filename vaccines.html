@@ -10,9 +10,6 @@
     </script>
     <script src="vaccines.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
@@ -23,24 +20,24 @@
 <body>
 
     <div class="container">
-        <div class="header">INTERNATIONAL COVID VACCINE ROLLOUT</div>
-        <div class="subheader">PERCENT COMPLETE BY COUNTRY</div>
+        <h1 class="header">UNITED STATES COVID DATA VISUALIZATION</h1>
+        <h2 class="subheader">TRACKING COVID CASES AND VACCINE ROLLOUT</h2>
         <div class="data-comparison-one">
             <div class="orange-virus">
                 <a style="pointer-events: none; cursor: default;" data-flickr-embed="true"
                     href="https://www.flickr.com/photos/184916186@N02/51140758210/in/dateposted-public/"
                     title="orange-virus"><img src="https://live.staticflickr.com/65535/51140758210_a1540fe91c_o.png"
-                        width="146" height="140" alt="orange-virus"></a>
+                        width="125" height="150" alt="orange-virus"></a>
             </div>
             <!-- <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> -->
             <div class="data-text-one">
                 <script src="vaccines.js"></script>
                 <h3>
-                    USA - TOTAL POSITIVE CASES
+                    CONFIRMED CASES IN THE US
                 </h3>
                 <p class="paragraph-one">
                     THE US HAS REPORTED <span id="totalCasesUS"></span> POSITIVE TESTS AS OF <span
-                    id="todayDateTwo"></span>.
+                        id="todayDateTwo"></span>.
                 </p>
             </div>
         </div>
@@ -48,14 +45,15 @@
             <a class="yellow-virus" style="pointer-events: none; cursor: default;" data-flickr-embed="true"
                 href="https://www.flickr.com/photos/184916186@N02/51140430664/in/dateposted-public/"
                 title="yellow-virus"><img src="https://live.staticflickr.com/65535/51140430664_fc36bf4da2_o.png"
-                    width="151" height="164" alt="yellow-virus"></a>
+                    width="125" height="150" alt="yellow-virus"></a>
             <!-- <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> -->
             <div class="data-text-two">
                 <h3>
-                    USA - TOTAL VACCINATIONS
+                    COMPLETE VACCINATIONS
                 </h3>
                 <p class="paragraph-two">
-                    <span id="usaPeople"></span> PEOPLE HAVE BEEN FULLY VACCINATED IN THE UNITED STATES AS OF  VACCINES AS OF <span id="todayDate"></span>.
+                    <span id="usaPeople"></span> PEOPLE HAVE BEEN FULLY VACCINATED IN THE UNITED STATES AS OF VACCINES
+                    AS OF <span id="todayDate"></span>.
                 </p>
             </div>
         </div>
@@ -63,14 +61,15 @@
             <a class="navy-virus" style="pointer-events: none; cursor: default;" data-flickr-embed="true"
                 href="https://www.flickr.com/photos/184916186@N02/51138980732/in/dateposted-public/"
                 title="navy-virus"><img src="https://live.staticflickr.com/65535/51138980732_08628b3155_o.png"
-                    width="146" height="168" alt="navy-virus"></a>
+                    width="125" height="150" alt="navy-virus"></a>
             <!-- <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> -->
             <div data-text-three>
                 <h3>
-                    USA - PARTIAL VACCINATIONS
+                    PARTIAL VACCINATIONS
                 </h3>
                 <p class="paragraph-three">
-                    <span id="partialUS"></span> PEOPLE HAVE BEEN PARTIALLY VACCINATED IN THE UNITED STATES AS OF  VACCINES AS OF <span id="todayDateThree"></span>.
+                    <span id="partialUS"></span> PEOPLE HAVE BEEN PARTIALLY VACCINATED IN THE UNITED STATES AS OF
+                    VACCINES AS OF <span id="todayDateThree"></span>.
                 </p>
             </div>
         </div>
@@ -78,15 +77,23 @@
             <a class="blue-virus" style="pointer-events: none; cursor: default;" data-flickr-embed="true"
                 href="https://www.flickr.com/photos/184916186@N02/51140758195/in/dateposted-public/"
                 title="blue-virus"><img src="https://live.staticflickr.com/65535/51140758195_56ec7b292d_o.png"
-                    width="146" height="168" alt="blue-virus"></a>
+                    width="125" height="150" alt="blue-virus"></a>
             <!-- <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> -->
             <div class='data-text-four'>
                 <h3>
-                    STATES WITH MOST CONFIRMED CASES
+                    POSITIVE CASES BY STATE
                 </h3>
-                <p class="paragraph-four">
-                    <span id="topFive"></span>
-                </p>
+                <div class="paragraph-four">
+                    <p>
+                        AS OF <span id="todayDateFour"></span>, THE TOP THREE STATES WITH THE
+                        MOST COVID CASES ARE:
+                    </p>
+                    <ul>
+                        <li><span id="firstState"></span></li>
+                        <li><span id="secondState"></span></li>
+                        <li><span id="thirdState"></span></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="total-vaccines">
