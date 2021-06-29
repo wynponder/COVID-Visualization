@@ -177,3 +177,15 @@ svg {
     align-items: center;
     justify-items: center;
 }
+
+#firstState {
+    text-transform: uppercase;
+}
+
+#secondState {
+    text-transform: uppercase;
+}
+
+#thirdState {
+    text-transform: uppercase;
+}
