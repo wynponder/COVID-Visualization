@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccine Visualization</title>
+    <!--enabled with jQuery-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+    </script>
+    <script src="vaccines.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="vaccines-stylesheet.css" rel="stylesheet">
+    <style></style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="header">UNITED STATES COVID BY THE NUMBERS </h1>
+        <h2 class="subheader">TRACKING COVID CASES AND VACCINE ROLLOUT</h2>
+        <div class="data-comparison-one">
+            <div class="orange-virus">
+                <img src="https://live.staticflickr.com/65535/51140758210_a1540fe91c_o.png" width="125" height="150"
+                    alt="orange-virus">
+            </div>
+            <div class="data-text-one">
+                <h3>
+                    TOTAL POSITIVE CASES IN THE US
+                </h3>
+                <p class="paragraph-one">
+                    SINCE THE START OF THE PANDEMIC, THE UNITED STATES HAS REPORTED A TOTAL OF <span id="totalCasesUS"></span> POSITIVE COVID CASES AS OF <span
+                        id="todayDateTwo"></span>.
+                </p>
+            </div>
+        </div>
+        <div class="data-comparison-two">
+            <div class="yellow-virus">
+                <img src="https://live.staticflickr.com/65535/51140430664_fc36bf4da2_o.png" width="125" height="150"
+                    alt="yellow-virus">
+            </div>
+            <div class="data-text-two">
+                <h3>
+                    COMPLETE VACCINATIONS
+                </h3>
+                <p class="paragraph-two">
+                    <span id="usaPeople"></span> PEOPLE HAVE BEEN FULLY VACCINATED IN THE UNITED STATES AS OF VACCINES
+                    AS OF <span id="todayDate"></span>.
+                </p>
+            </div>
+        </div>
+        <div class="data-comparison-three">
+            <div class="navy-virus">
+                <img src="https://live.staticflickr.com/65535/51138980732_08628b3155_o.png" width="125" height="150"
+                    alt="navy-virus">
+            </div>
+            <div data-text-three>
+                <h3>
+                    PARTIAL VACCINATIONS
+                </h3>
+                <p class="paragraph-three">
+                    <span id="partialUS"></span> PEOPLE HAVE BEEN PARTIALLY VACCINATED IN THE UNITED STATES AS OF
+                    VACCINES AS OF <span id="todayDateThree"></span>.
+                </p>
+            </div>
+        </div>
+        <div class="data-comparison-four">
+            <div class="blue-virus">
+                <img src="https://live.staticflickr.com/65535/51140758195_56ec7b292d_o.png" width="125" height="150"
+                    alt="blue-virus">
+            </div>
+            <div class='data-text-four'>
+                <h3>
+                    POSITIVE CASES BY STATE
+                </h3>
+                <div class="paragraph-four">
+                    <!-- <p> AS OF <span id="todayDateFour"></span>, THE TOP THREE STATES WITH THE MOST COVID CASES ARE:<br>
+                        <span id="firstState"></span> <br>
+                        <span id="secondState"></span> <br>
+                        <span id="thirdState"></span> <br>
+                    </p>-->
+                    <p class="text-four">AS OF <span id="todayDateFour"></span>, THE TOP THREE STATES WITH THE MOST
+                        COVID CASES ARE:</p>
+                    <ul>
+                        <li><span id="firstState"></span></li>
+                        <li><span id="secondState"></span></li>
+                        <li><span id="thirdState"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="total-vaccines">
+            <span id="admin"></span>
+
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin" x="0px" y="0px"
+                viewBox="0 0 577.37 577.37" <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1"><text class="cls-1"
+                        transform="matrix(0.42, -0.91, 0.91, 0.42, 137.12, 235.17)">T</text><text class="cls-1"
+                        transform="translate(150.34 205.33) rotate(-51.1)">O</text><text class="cls-1"
+                        transform="matrix(0.8, -0.6, 0.6, 0.8, 180.26, 170.08)">T</text><text class="cls-1"
+                        transform="translate(205.18 150.88) rotate(-24.55)">A</text><text class="cls-1"
+                        transform="translate(242.36 134.75) rotate(-11.23)">L</text><text class="cls-1"
+                        transform="translate(276.28 129.02) rotate(-2)"> </text><text class="cls-1"
+                        transform="translate(293.62 127.74) rotate(8.18)">V</text><text class="cls-1"
+                        transform="translate(330.92 133.2) rotate(21.82)">A</text><text class="cls-1"
+                        transform="translate(367.88 148.36) rotate(36.17)">C</text><text class="cls-1"
+                        transform="matrix(0.64, 0.77, -0.77, 0.64, 399.83, 172.09)">C</text><text class="cls-1"
+                        transform="matrix(0.48, 0.88, -0.88, 0.48, 424.95, 204.39)">I</text><text class="cls-1"
+                        transform="translate(435.17 220.82) rotate(72.72)">N</text><text class="cls-1"
+                        transform="translate(447.78 264.37) rotate(87.52)">E</text><text class="cls-1"
+                        transform="translate(448.9 302.43) rotate(100.56)">S</text><text class="cls-1"
+                        transform="matrix(-0.34, 0.94, -0.94, -0.34, 441.31, 337.31)"> </text><text class="cls-1"
+                        transform="translate(436.04 353.9) rotate(120.57)">A</text><text class="cls-1"
+                        transform="translate(415.46 388.62) rotate(135.85)">D</text><text class="cls-1"
+                        transform="matrix(-0.89, 0.45, -0.45, -0.89, 382.61, 420.63)">M</text><text class="cls-1"
+                        transform="translate(334.4 442.25) rotate(166.28)">I</text><text class="cls-1"
+                        transform="matrix(-1, 0.04, -0.04, -1, 315.85, 447.78)">N</text><text class="cls-1"
+                        transform="translate(270.17 447.81) rotate(-170.61)">I</text><text class="cls-1"
+                        transform="translate(250.91 445.01) rotate(-160.74)">S</text><text class="cls-1"
+                        transform="translate(218.11 433.11) rotate(-148.57)">T</text><text class="cls-1"
+                        transform="translate(189.79 415.84) rotate(-135.46)">E</text><text class="cls-1"
+                        transform="matrix(-0.53, -0.85, 0.85, -0.53, 162.66, 389.09)">R</text><text class="cls-1"
+                        transform="translate(141.62 354.17) rotate(-107.75)">E</text><text class="cls-1"
+                        transform="translate(129.94 318.07) rotate(-92.83)">D</text></g>
+                </g>
+            </svg>
+        </div>
+    </div>
+
+</body>
+
+</html>
